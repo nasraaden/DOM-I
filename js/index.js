@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br /> Is <br /> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street <br /> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -52,7 +52,7 @@ navBar[5].textContent = "Contact";
 
 //header h1 and button
 const headerh1 = document.querySelector('h1');
-headerh1.textContent = siteContent['cta']['h1'];
+headerh1.innerHTML = siteContent['cta']['h1'];
 
 const headerButton = document.querySelector('button');
 headerButton.textContent = siteContent['cta']['button'];
@@ -96,7 +96,7 @@ contactTitle.textContent = siteContent["contact"]["contact-h4"];
 
 //contact p
 const contactParagraph = document.querySelectorAll('.contact p');
-contactParagraph[0].textContent = siteContent["contact"]["address"];
+contactParagraph[0].innerHTML = siteContent["contact"]["address"];
 contactParagraph[1].textContent = siteContent["contact"]["phone"];
 contactParagraph[2].textContent = siteContent["contact"]["email"];
 
