@@ -50,6 +50,23 @@ navBar[3].textContent = "Features";
 navBar[4].textContent = "About";
 navBar[5].textContent = "Contact";
 
+//nav bar new content
+navBar.forEach(element => {
+  element.style.color='green';
+})
+
+const nav = document.querySelector('nav');
+
+const firstLink = document.createElement('a');
+firstLink.textContent = 'Home'
+nav.prepend(firstLink);
+firstLink.style.color = 'green';
+
+const lastLink = document.createElement('a');
+lastLink.textContent = 'Team'
+nav.append(lastLink);
+lastLink.style.color = 'green';
+
 //header h1 and button
 const headerh1 = document.querySelector('h1');
 headerh1.innerHTML = siteContent['cta']['h1'];
@@ -66,8 +83,6 @@ const mainContentTitle = document.querySelectorAll('.main-content h4');
 mainContentTitle[0].textContent = siteContent["main-content"]["features-h4"];
 mainContentTitle[1].textContent = siteContent["main-content"]["about-h4"]
 
-// const featuresContent = document.querySelector('.text-content p');
-// featuresContent.textContent = siteContent["main-content"]["features-content"]
 
 //features and about p
 const mainContentParagraph = document.querySelectorAll('.main-content p');
@@ -103,3 +118,4 @@ contactParagraph[2].textContent = siteContent["contact"]["email"];
 //footer
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
+
